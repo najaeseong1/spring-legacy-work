@@ -56,7 +56,7 @@
                         <option value="macchiato">카라멜 마끼아또</option>                        
                     </select>
                 </label>
-                <label class="price"># 가격: <span class="price-value" >3000</span>원</label>
+                <label class="price"># 가격: <span class="price-value">3000</span>원</label>
 
                 <!-- 화면에 렌더링은 안되지만 서버로 보낼 수 있음 -->
                 <input id="price-tag" type="hidden" name="price">
@@ -85,12 +85,31 @@
     		//커피를 선택하면 가격이 변해야 함!
     		//console.log('이벤트 타겟: ', e.target.value);
     		//console.log('변경된 커피값: ', coffeePrice[e.target.value])
-    		const price = coffeePrice[e.target.value]
+    		
+    		const price = coffeePrice[e.target.value];
     		document.querySelector('.price-value').textContent = price;
     		
     		const $priceTag = document.getElementById('price-tag');
     		$priceTag.value = price;
-    	};
+    		
+    	}
+    
     </script>
+    
+    
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

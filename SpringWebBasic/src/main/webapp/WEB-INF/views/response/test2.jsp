@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>test2.jsp 페이지입니다.</h2>
+
 	<h2>@ModelAttribute로 여러 개의 값을 전송하기</h2>
 	<p>
 		아이디: ${info.userId} <br>
-		이름: ${info.userName} <br>
+		이름: ${info.userName}
 	</p>
+
 </body>
 </html>
