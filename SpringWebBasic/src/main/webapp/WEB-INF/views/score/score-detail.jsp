@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Insert title here</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- reset css -->
@@ -62,26 +62,27 @@
             border-radius: 5px;
         }
     </style>
-    </head>
 
-    <body>
-        <div class="wrap">
-            <section class="score-main">
-                <h1> ${s.stuNum}님 성적 정보</h1>
-                <ul>
-                    <li># 국어: ${s.kor} 점</li>
-                    <li># 영어: ${s.eng} 점</li>
-                    <li># 수학: ${s.math} 점</li>
-                    <li># 총점: ${s.total} 점</li>
-                    <li># 평균: ${s.average} 점</li>
-                    <li># 학점: ${s.grade} 점</li>
-                </ul>
-                <div class="btn-group">
-                    <a href="/basic/score/list" class="list-btn">목록</a>
-                    <a href="/basic/score/modify?stuNum=${s.stuNum}" class="mod-btn">수정</a>
-                </div>
-            </section>
-        </div>
-    </body>
+</head>
+<body>
 
-    </html>
+    <div class="wrap">
+        <section class="score-main">
+            <h1>${s.stuName}님 성적 정보</h1>
+            <ul>
+                <li># 국어: ${s.kor}점</li>
+                <li># 영어: ${s.eng}점</li>
+                <li># 수학: ${s.math}점</li>
+                <li># 총점: ${s.total}점</li>
+                <li># 평균: ${s.average}점</li>
+                <li># 학점: ${s.grade}</li>
+            </ul>
+            <div class="btn-group">
+                <a href="/basic/score/list" class="list-btn">목록</a>
+                <a href="/basic/score/modify?stuNum=${s.stuNum}" class="mod-btn">수정</a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

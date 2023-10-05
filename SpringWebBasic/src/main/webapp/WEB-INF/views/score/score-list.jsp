@@ -143,7 +143,9 @@
             if(!e.target.matches('a.del-btn')) {
                 return; //이벤트 강제 종료.
             }
-			e.preventDefault();	// a 태그의 기본 기능 정지
+            
+            e.preventDefault(); // a태그의 기본 기능 정지
+
             if(confirm('정말 삭제하시겠습니까?')) {
                 //삭제 진행
                 //location.href == sendRedirect()
@@ -151,8 +153,30 @@
             } else {
                 return; //삭제 취소
             }
+            
+
+
         });
+
     </script>
+
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

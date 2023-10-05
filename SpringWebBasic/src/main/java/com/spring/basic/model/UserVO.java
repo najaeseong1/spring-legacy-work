@@ -14,10 +14,11 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-
 public class UserVO {
+	
 	private String userId;
 	private String userPw;
 	private String userName;
 	private List<String> hobby;
+
 }
