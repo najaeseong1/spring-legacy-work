@@ -84,15 +84,3 @@ public class FreeBoardController {
 	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
