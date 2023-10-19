@@ -31,7 +31,7 @@ public class MailSenderService {
 	public String joinEmail(String email) {
 		int authNum = makeRandomNumber(); //인증번호 생성
 		
-		String setFrom = "najaeseong1@naver.com"; //email-config에 설정한 발신용 이메일 주소 입력.
+		String setFrom = "stephen4951@naver.com"; //email-config에 설정한 발신용 이메일 주소 입력.
 		String toMail = email; //수신받을 이메일(가입하고자 하는 사람의 이메일)
 		String title = "MyWeb 회원 가입 인증 이메일 입니다."; //이메일 제목
 		String content = "홈페이지 가입을 신청해 주셔서 감사합니다." + 
