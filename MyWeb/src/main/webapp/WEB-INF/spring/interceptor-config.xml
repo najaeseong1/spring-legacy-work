@@ -13,7 +13,7 @@
 	
 	<mvc:interceptors>
 		
-		<!-- 로그인 이후에 실행되는 postHandler를 어떤 url에 동작하게 할 지 세팅 -->	
+		<!-- 로그인 이후에 실행되는 postHandler를 어떤 url에 동작하게 할 지 세팅 -->
 		<mvc:interceptor>
 			<mvc:mapping path="/user/userLogin"/>
 			<ref bean="userLoginHandler" />
@@ -21,10 +21,10 @@
 		
 		<!-- 로그인 권한 체크 인터셉터 url 매핑 -->
 		<mvc:interceptor>
-			<mvc:mapping path="/freeboard/freeregist"/>
+			<mvc:mapping path="/freeboard/freeRegist"/>
 			<mvc:mapping path="/user/userMypage"/>
-			<!-- <mvc:mapping path="/freeboard/**"/> freeboard로 시작하는 모든 요청을 전부 로그인 권한 체크를 하겠다.-->
-			<ref bean="userAuth"/>
+			<!-- <mvc:mapping path="/freeboard/**"/> -->
+			<ref bean="userAuth" />
 		</mvc:interceptor>
 		
 	</mvc:interceptors>

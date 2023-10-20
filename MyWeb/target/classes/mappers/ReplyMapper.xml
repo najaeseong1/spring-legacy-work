@@ -11,26 +11,42 @@
 	</insert>
 	
 	<select id="getList" resultType="reply">
-SELECT * FROM
-            (
-            SELECT ROWNUM AS RN, tbl.* FROM
-                (
-                SELECT * FROM tbl_reply
-                WHERE bno = #{boardNo}
-                ORDER BY reply_no DESC
-                ) tbl
-            )
-        <![CDATA[
-        WHERE rn > #{paging.pageStart} AND rn <= #{paging.pageEnd}
-        ]]>
+		SELECT * FROM
+			(
+			SELECT ROWNUM AS RN, tbl.* FROM
+				(
+				SELECT * FROM tbl_reply
+				WHERE bno = #{boardNo}
+				ORDER BY reply_no DESC
+				) tbl
+			)
+		<![CDATA[
+		WHERE rn > #{paging.pageStart} AND rn <= #{paging.pageEnd}
+		]]>
 	</select>
 	
 	<select id="getTotal" resultType="int">
-		SeLECT COUNT(*)
+		SELECT COUNT(*)
 		FROM tbl_reply
 		WHERE bno = #{bno}
 	</select>
+	
+	<select id="pwCheck" resultType="string">
+		SELECT reply_pw
+		FROM tbl_reply
+		WHERE reply_no = #{rno}
+	</select>
+	
+	<update id="update">
+		UPDATE tbl_reply
+		SET reply_text = #{replyText}, update_date = sysdate
+		WHERE reply_no = #{replyNo}
+	</update>
 
+	<delete id="delete">
+		DELETE FROM tbl_reply
+		WHERE reply_no = #{rno}
+	</delete>
 
 
 </mapper>
