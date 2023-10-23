@@ -11,7 +11,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /*
--- SNS 게시판
+ -- SNS 게시판
 CREATE TABLE snsboard(
     bno NUMBER PRIMARY KEY,
     writer VARCHAR2(50) NOT NULL,
@@ -26,22 +26,40 @@ CREATE TABLE snsboard(
 CREATE SEQUENCE snsboard_seq
     START WITH 1
     INCREMENT BY 1
-    MAXVALUE 1000000
+    MAXVALUE 100000
     NOCYCLE
     NOCACHE;
-*/
+ */
+
 @Getter @Setter @ToString
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class SnsBoard {
+	
 	private int bno;
 	private String writer;
 	private String uploadPath;
 	private String fileLoca;
 	private String fileName;
-	private String filerRealName;
+	private String fileRealName;
 	private String content;
 	private LocalDateTime regDate;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

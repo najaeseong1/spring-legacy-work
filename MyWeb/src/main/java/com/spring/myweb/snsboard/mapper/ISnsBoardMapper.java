@@ -6,6 +6,7 @@ import com.spring.myweb.freeboard.dto.page.Page;
 import com.spring.myweb.snsboard.entity.SnsBoard;
 
 public interface ISnsBoardMapper {
+	
 	//등록
 	void insert(SnsBoard board);
 	
@@ -15,6 +16,18 @@ public interface ISnsBoardMapper {
 	//상세
 	SnsBoard getDetail(int bno);
 	
+	//수정
+	void update(SnsBoard board);
+
 	//삭제
 	void delete(int bno);
+
 }
+
+
+
+
+
+
+
+
